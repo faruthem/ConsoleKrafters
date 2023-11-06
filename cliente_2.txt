@@ -1,0 +1,5 @@
+vamos a agregar formik y yup con el comando:
+    yarn add formik yup
+
+    formik sirve para controlar el estado del formulario
+    yup valida los campos
