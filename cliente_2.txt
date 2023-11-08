@@ -3,3 +3,6 @@ vamos a agregar formik y yup con el comando:
 
     formik sirve para controlar el estado del formulario
     yup valida los campos
+
+    Para poder crear la expiración de tokens para el inicio de sesión del usuario es necesario lo siguiente:
+        yarn add jwt-decode
