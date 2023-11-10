@@ -66,10 +66,12 @@
       "configurable": false
     },
     "firstname": {
-      "type": "string"
+      "type": "string",
+      "required": false
     },
     "lastname": {
-      "type": "string"
+      "type": "string",
+      "required": false
     }
   }
 }

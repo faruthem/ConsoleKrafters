@@ -6,3 +6,5 @@ vamos a agregar formik y yup con el comando:
 
     Para poder crear la expiración de tokens para el inicio de sesión del usuario es necesario lo siguiente:
         yarn add jwt-decode
+    Instalamos las clases condicionales en nuestro proyecto
+        yarn add classnames

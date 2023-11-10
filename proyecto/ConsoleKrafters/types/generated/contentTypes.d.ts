@@ -684,6 +684,7 @@ export interface ApiAddressAddress extends Schema.CollectionType {
     singularName: 'address';
     pluralName: 'addresses';
     displayName: 'Address';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -696,7 +697,7 @@ export interface ApiAddressAddress extends Schema.CollectionType {
     state: Attribute.String & Attribute.Required;
     postal_code: Attribute.String & Attribute.Required;
     phone: Attribute.String & Attribute.Required;
-    users: Attribute.Relation<
+    user: Attribute.Relation<
       'api::address.address',
       'oneToOne',
       'plugin::users-permissions.user'
