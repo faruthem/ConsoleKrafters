@@ -8,3 +8,5 @@ vamos a agregar formik y yup con el comando:
         yarn add jwt-decode
     Instalamos las clases condicionales en nuestro proyecto
         yarn add classnames
+    Instalación en el proyecto de: lodash el cual incluye funciones básicas de JS
+        yarn add lodash
