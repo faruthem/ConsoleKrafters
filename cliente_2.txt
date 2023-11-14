@@ -10,3 +10,5 @@ vamos a agregar formik y yup con el comando:
         yarn add classnames
     Instalación en el proyecto de: lodash el cual incluye funciones básicas de JS
         yarn add lodash
+    Instalaci[on en el proyecto para formatear fechas]
+        yarn add luxon
