@@ -6,7 +6,6 @@ import { DateTime } from "luxon";
 export function Info() {
   const { user } = useAuth();
 
-  console.log(user);
   return (
     <div className={styles.info}>
       <Button icon className={styles.user}>
@@ -14,6 +13,7 @@ export function Info() {
       </Button>
 
       <h3 className={styles.username}>{user.username}</h3>
+      <h3 className={styles.username}>{user.firstname}</h3>
       <h4 className={styles.email}>{user.email}</h4>
       <p className={styles.createAt}>
         Miembro desde:{" "}

@@ -1,5 +1,5 @@
 import { ENV } from "@/utils";
-import { JwtDecodeOptions, jwtDecode } from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 
 export class Token {
   setToken(token) {
