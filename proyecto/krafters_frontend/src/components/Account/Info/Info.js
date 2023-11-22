@@ -9,7 +9,7 @@ export function Info() {
   return (
     <div className={styles.info}>
       <Button icon className={styles.user}>
-        <Icon name="user online" />
+        <Icon name="user outline" />
       </Button>
 
       <h3 className={styles.username}>{user.username}</h3>

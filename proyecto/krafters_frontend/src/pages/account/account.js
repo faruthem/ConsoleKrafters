@@ -41,12 +41,13 @@ export default function AccountPage() {
       ),
     },
     {
-      menuItem: { icon: "settings", content: "Ajustes" },
+      menuItem: { key: 20, icon: "settings", content: "Ajustes" },
       render: () => (
         <Tab.Pane attached={false}>
           <Settings.ChangeNameForm />
           <div className={styles.containerForms}>
             <Settings.ChangeEmailForm />
+            <Settings.ChangePasswordForm />
           </div>
           <Separator height={80} px />
         </Tab.Pane>
@@ -54,7 +55,8 @@ export default function AccountPage() {
     },
     {
       menuItem: {
-        icon: "logout",
+        key: 21,
+        icon: "log out",
         content: "",
         onClick: logout,
       },
