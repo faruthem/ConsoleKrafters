@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
-import { Address } from "@/api";
+import { Address as AddressCtrl } from "@/api";
 import { useAuth } from "@/hooks";
+import { map } from "lodash";
+import { Address } from "./Address";
 import styles from "./ListAddresses.module.scss";
 
-const addressCtrl = new Address();
+const addressCtrl = new AddressCtrl();
 
-export function ListAddresses() {
+export function ListAddresses(props) {
+  const { reload, onReload } = props;
   const [addresses, setAddresses] = useState(null);
   const { user } = useAuth();
 
@@ -18,12 +21,20 @@ export function ListAddresses() {
         console.error(error);
       }
     })();
-  }, []);
+  }, [reload]);
 
   if (!addresses) return null;
+
   return (
-    <div>
-      <h2>Somos Direcciones </h2>
+    <div className={styles.addresses}>
+      {map(addresses, (address) => (
+        <Address
+          key={address.id}
+          addressId={address.id}
+          address={address.attributes}
+          onReload={onReload}
+        />
+      ))}
     </div>
   );
 }

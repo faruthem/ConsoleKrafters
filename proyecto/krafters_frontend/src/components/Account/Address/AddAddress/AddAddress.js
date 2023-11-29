@@ -4,7 +4,8 @@ import { BasicModal } from "@/components/Shared/BasicModal";
 import { AddressForm } from "../AddressForm/AddressForm";
 import styles from "./AddAddress.module.scss";
 
-export function AddAddress() {
+export function AddAddress(props) {
+  const { onReload } = props;
   const [show, setShow] = useState(false);
 
   const onOpenClose = () => setShow((prevState) => !prevState);
@@ -15,7 +16,7 @@ export function AddAddress() {
         Crear
       </Button>
       <BasicModal show={show} onClose={onOpenClose} title="Nueva dirección">
-        <AddressForm onClose={onOpenClose} />
+        <AddressForm onClose={onOpenClose} onReload={onReload} />
       </BasicModal>
     </div>
   );
