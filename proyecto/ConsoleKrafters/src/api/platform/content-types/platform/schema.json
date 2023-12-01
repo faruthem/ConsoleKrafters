@@ -32,9 +32,9 @@
       "multiple": false,
       "required": true
     },
-    "game": {
+    "games": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::game.game",
       "inversedBy": "platforms"
     }

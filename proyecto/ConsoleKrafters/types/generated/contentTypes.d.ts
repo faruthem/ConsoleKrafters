@@ -725,6 +725,7 @@ export interface ApiGameGame extends Schema.CollectionType {
     singularName: 'game';
     pluralName: 'games';
     displayName: 'Game';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -733,7 +734,7 @@ export interface ApiGameGame extends Schema.CollectionType {
     title: Attribute.String & Attribute.Required;
     platforms: Attribute.Relation<
       'api::game.game',
-      'oneToMany',
+      'manyToMany',
       'api::platform.platform'
     >;
     price: Attribute.Decimal & Attribute.Required;
@@ -808,9 +809,9 @@ export interface ApiPlatformPlatform extends Schema.CollectionType {
     slug: Attribute.UID<'api::platform.platform', 'title'> & Attribute.Required;
     order: Attribute.Integer & Attribute.Required;
     icon: Attribute.Media & Attribute.Required;
-    game: Attribute.Relation<
+    games: Attribute.Relation<
       'api::platform.platform',
-      'manyToOne',
+      'manyToMany',
       'api::game.game'
     >;
     createdAt: Attribute.DateTime;
