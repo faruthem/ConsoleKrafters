@@ -16,11 +16,11 @@
       "type": "string",
       "required": true
     },
-    "platforms": {
+    "platform": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::platform.platform",
-      "mappedBy": "games"
+      "inversedBy": "games"
     },
     "price": {
       "type": "decimal",

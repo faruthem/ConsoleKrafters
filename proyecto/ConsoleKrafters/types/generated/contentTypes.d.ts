@@ -732,9 +732,9 @@ export interface ApiGameGame extends Schema.CollectionType {
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
-    platforms: Attribute.Relation<
+    platform: Attribute.Relation<
       'api::game.game',
-      'manyToMany',
+      'manyToOne',
       'api::platform.platform'
     >;
     price: Attribute.Decimal & Attribute.Required;
@@ -811,7 +811,7 @@ export interface ApiPlatformPlatform extends Schema.CollectionType {
     icon: Attribute.Media & Attribute.Required;
     games: Attribute.Relation<
       'api::platform.platform',
-      'manyToMany',
+      'oneToMany',
       'api::game.game'
     >;
     createdAt: Attribute.DateTime;
