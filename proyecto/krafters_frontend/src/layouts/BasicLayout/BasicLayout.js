@@ -10,6 +10,7 @@ export function BasicLayout(props) {
     isContainer = false,
     relative = false,
   } = props;
+
   return (
     <>
       <TopBar isOpenSearch={isOpenSearch} />
